@@ -1,0 +1,17 @@
+.wraper {
+  padding: 100px 100px 30vh;
+  height: 100vh;
+}
+
+.block {
+  height: 100%;
+  box-shadow: 0 0 10px rgb(83, 83, 83);
+  border-radius: 5px;
+  background: url("https://picsum.photos/id/17/200/300") center no-repeat, linear-gradient(#0e9c15, #6d5eed);
+     /* background-image: url("https://picsum.photos/id/17/200/300"); */
+  /* background: linear-gradient(#0e9c15, #6d5eed); */
+  /* background-repeat: no-repeat;
+  background-position: center; */
+
+
+}

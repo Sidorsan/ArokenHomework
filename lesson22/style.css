@@ -1,0 +1,9 @@
+.text{
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 50vw;
+  padding: 25px 25px 0;
+  margin: 0;
+  overflow: auto;
+  height: 100px;
+}
