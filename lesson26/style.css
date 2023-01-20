@@ -1,0 +1,28 @@
+.block {
+  box-sizing: border-box;
+  height: 100px;
+  width: 50px;
+  background-color: blue;
+  border: 5px solid black;
+  transition: border 3s 2s;
+}
+
+.block:hover {
+  border: solid #fff;
+}
+.block-1 {
+  box-sizing: border-box;
+  margin-top: 10px;
+  height: 100px;
+  width: 50px;
+  background-color: rgb(216, 183, 32);
+  border: 5px solid black;
+  transition-duration: 3s;
+  transition-property: border;
+  transition-delay: 2s;
+
+}
+
+.block-1:hover {
+  border: solid #fff;
+}

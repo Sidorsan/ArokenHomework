@@ -1,0 +1,12 @@
+.text{
+  animation: color-text 1s linear infinite alternate;
+}
+
+@keyframes color-text {
+  0%{
+color: black;
+  }
+  100% {
+    color: red;
+  }
+}

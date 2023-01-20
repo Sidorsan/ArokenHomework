@@ -1,0 +1,13 @@
+/* html {
+  height: 100%;
+} */
+.block {
+  position:fixed ;
+  height: 100px;
+  width: 50px;
+  background: blue;
+  border-radius: 10px;
+bottom: 100px;
+right: 50px;
+left: 50%;
+}
