@@ -7,11 +7,14 @@
   height: 100%;
   box-shadow: 0 0 10px rgb(83, 83, 83);
   border-radius: 5px;
-  background: url("https://picsum.photos/id/17/200/300") center no-repeat, linear-gradient(#0e9c15, #6d5eed);
-     /* background-image: url("https://picsum.photos/id/17/200/300"); */
-  /* background: linear-gradient(#0e9c15, #6d5eed); */
-  /* background-repeat: no-repeat;
-  background-position: center; */
+  /* background: url("https://picsum.photos/id/17/200/300") center no-repeat, linear-gradient(#0e9c15, #6d5eed); */
+  /* background-image: linear-gradient(#0e9c15, #6d5eed); */
+  
+  background: linear-gradient(rgba(235, 233, 249, 1) 0%, rgba(216, 208, 239, 1) 39%, rgba(206, 199, 236, 1) 51%, rgba(193, 191, 234, 1) 100%);
+  background-image: url("https://picsum.photos/id/17/200/300"); 
+  
+  background-repeat: no-repeat; 
+  background-position: center;
 
 
 }
