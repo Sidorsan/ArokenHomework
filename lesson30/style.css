@@ -1,4 +1,5 @@
 .menu__item:first-child:hover {
 color: red;
 cursor: pointer;
+
 }
