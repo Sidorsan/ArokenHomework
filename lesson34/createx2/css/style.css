@@ -113,7 +113,7 @@ body {
 
 .header__user-nav {
   position: relative;
-  padding-left: 28px;
+  /* padding-left: 28px; */
   white-space: nowrap;
   margin-right: 36px;
 }
