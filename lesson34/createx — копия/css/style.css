@@ -74,7 +74,7 @@ body {
 }
 
 .header__logo {
-  margin-right: 60px;
+  margin-right: 36px;
 }
 
 .header__nav {
@@ -115,6 +115,7 @@ body {
   position: relative;
   padding-left: 28px;
   white-space: nowrap;
+  margin-right: 36px;
 }
 
 .header__user-nav::before {
@@ -144,8 +145,7 @@ body {
 }
 
 .header__body_inner {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   height: 100%;
 }
 
