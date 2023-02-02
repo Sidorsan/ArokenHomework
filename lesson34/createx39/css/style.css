@@ -635,7 +635,7 @@ body {
 }
 
 .team__slide:hover .team__social {
- transform: translateY(0);
+  transform: translateY(0);
 }
 
 .team__image-box {
@@ -680,17 +680,20 @@ body {
 .team__social-item {
   margin-right: 12px;
 }
+
 .team__social-item:last-child {
   margin-right: 0;
 }
-.team__social-link  {
- display: block;
- line-height: 0;
+
+.team__social-link {
+  display: block;
+  line-height: 0;
 }
 
 .team__social-link path {
   transition: all 0.3s;
 }
+
 .team__social-link:hover path {
   cursor: pointer;
   fill: #fff;
@@ -724,6 +727,7 @@ body {
   border-radius: 50%;
   position: relative;
 }
+
 .team__slider-arrow::before {
   content: "";
   position: absolute;
@@ -743,7 +747,7 @@ body {
 }
 
 .team__slider-arrows path {
-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .team__slider-arrow:hover path {
@@ -755,6 +759,52 @@ transition: all 0.3s;
   margin-right: 24px;
 }
 
-.team__slider-next {
+.slick-dots {
+  margin-top: 20px;
+  text-align: center;
+}
 
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: black;
+}
+
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: black;
 }
