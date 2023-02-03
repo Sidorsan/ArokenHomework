@@ -30,6 +30,18 @@ body {
   margin-bottom: -46px;
 }
 
+.main__team {
+  padding: 160px 0 180px;
+}
+
+.main__testimonials {
+  padding-bottom: 195px;
+}
+
+.main__companies {
+  padding-bottom: 177px;
+}
+
 .button {
   display: inline-block;
   font-weight: 700;
@@ -551,7 +563,7 @@ body {
   content: "";
   width: 24px;
   height: 24px;
-  background: url("../images/icons/arrow_right.svg") 0 2px/100% no-repeat;
+  background: url("../images/icons/arrow_right_red.svg") 0 2px/100% no-repeat;
   margin-left: 11px;
 }
 
@@ -610,12 +622,10 @@ body {
 /*___________________TEAM__________________*/
 /*___________________TEAM__________________*/
 
-.main__team {
-  padding: 160px 0 180px;
-}
+
 
 .team {
-  background: url('../images/decor/team_bg.svg') 200px 30px no-repeat, #F4F5F7;
+  background: url('../images/decor/team_bg.svg') calc(50% + 140px) calc(50% - 120px) no-repeat, #F4F5F7;
 }
 
 .team__inner {}
@@ -635,7 +645,7 @@ body {
 }
 
 .team__slide:hover .team__social {
- transform: translateY(0);
+  transform: translateY(0);
 }
 
 .team__image-box {
@@ -680,17 +690,20 @@ body {
 .team__social-item {
   margin-right: 12px;
 }
+
 .team__social-item:last-child {
   margin-right: 0;
 }
-.team__social-link  {
- display: block;
- line-height: 0;
+
+.team__social-link {
+  display: block;
+  line-height: 0;
 }
 
 .team__social-link path {
   transition: all 0.3s;
 }
+
 .team__social-link:hover path {
   cursor: pointer;
   fill: #fff;
@@ -723,7 +736,9 @@ body {
   line-height: 0;
   border-radius: 50%;
   position: relative;
+  z-index: 5;
 }
+
 .team__slider-arrow::before {
   content: "";
   position: absolute;
@@ -743,7 +758,7 @@ body {
 }
 
 .team__slider-arrows path {
-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .team__slider-arrow:hover path {
@@ -755,6 +770,249 @@ transition: all 0.3s;
   margin-right: 24px;
 }
 
-.team__slider-next {
+/*---------------------------TESTIMONIALS----------------------------*/
+/*---------------------------TESTIMONIALS----------------------------*/
 
+
+
+.testimonials {
+  background: #F4F5F7;
+  position: relative;
+}
+
+.testimonials::before {
+  /* background: url('../images/decor/testi_bg.svg') calc(50% + 98px) calc(50% - 44px) no-repeat, #F4F5F7; */
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-44.9%, -55.4%);
+  background: url('../images/decor/testi_bg.svg');
+  width: 1971px;
+  height: 816px;
+}
+
+
+.testimonials__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonials__heading {
+  margin-bottom: 60px;
+}
+
+.testimonials__slider-wrapper {
+  padding: 0 50px;
+  position: relative;
+  margin-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.testimonials__slider {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.testimonials__slide {
+  padding: 64px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.testimonials__slide-inner {
+  max-width: 810px;
+  margin: 0 auto;
+  padding-left: 58px;
+}
+
+.testimonials__quote {
+  font-size: 20px;
+  line-height: 150%;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.testimonials__quote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -58px;
+  background: url('../images/icons/quote_item.svg') 0 0 / 100% no-repeat;
+  width: 28px;
+  height: 20px;
+}
+
+.testimonials__user {
+  display: flex;
+  align-items: center;
+}
+
+.testimonials__avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.testimonials__info {}
+
+.testimonials__info-name {
+  font-weight: 700;
+  color: #1E212C;
+  margin-bottom: 4px;
+}
+
+.testimonials__info-position {
+  font-size: 14px;
+  line-height: 150%;
+  color: #787A80
+}
+
+.testimonials__arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+.testimonials__arrow path {
+  transition: all 0.3s;
+}
+
+.testimonials__arrow:hover path {
+  fill: #fff;
+}
+
+.testimonials__arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #FF3F3A;
+  z-index: -1;
+
+
+}
+
+.testimonials__prev {
+  left: 0;
+}
+
+.testimonials__next {
+  right: 0;
+  justify-content: flex-end;
+}
+
+.testimonials__prev::before {
+  transform: translate(-50%, -50%) scale(0);
+  left: 20%;
+}
+
+.testimonials__next::before {
+  transform: translate(50%, -50%) scale(0);
+  right: 20%;
+}
+
+.testimonials__prev:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.testimonials__next:hover:before {
+  transform: translate(50%, -50%) scale(1);
+}
+
+.testimonials__dots .slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.testimonials__dots li {
+  margin-right: 12px;
+}
+
+.testimonials__dots li:last-child {
+  margin-right: 0;
+}
+
+
+
+.testimonials__dots button {
+  font-size: 0;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+
+}
+
+.testimonials__dots button::before {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: #B3B7BC;
+  border-radius: 3px;
+}
+
+.testimonials__dots .slick-active button::before {
+  background-color: #424551;
+  transition: all .3s;
+}
+
+/*---------------------------TESTIMONIALS----------------------------*/
+/*---------------------------TESTIMONIALS----------------------------*/
+
+
+
+.companies {
+  background: #F4F5F7;
+}
+
+.companies__inner {
+  position: relative;
+}
+.companies__inner::before {
+  position: absolute;
+  content: "";
+  left: -230px;
+  bottom: -120px;
+  background: url('../images/decor/5.svg') 0 0 / 100% no-repeat;
+  width: 90px;
+  height: 90px;
+}
+
+.companies__heading {
+  margin-bottom: 60px;
+}
+
+.companies__grid {
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(6, 1fr);
+  gap: 40px 100px;
+}
+
+.companies__grid-item {}
+
+.companies__grid-link {
+  display: block;
+}
+.companies__grid-link img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  opacity: .4;
+  transition: all 1.3s;
+}
+.companies__grid-link:hover img {
+    filter: grayscale(0);
+  opacity: 1;
+  transition: all .3s;
 }
