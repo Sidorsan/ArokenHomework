@@ -35,17 +35,20 @@ $(function () {
   // } )
   $('.program__acc-link').on('click', function (e) {
     e.preventDefault()
-    if ($(this).hasClass('program__acc-link--activ')) {
-      $(this).removeClass('program__acc-link--activ')
-      $(this).children('.program__acc-text').slideUp()
+//     if ($(this).hasClass('program__acc-link--activ')) {
+//       $(this).removeClass('program__acc-link--activ')
+//       $(this).children('.program__acc-text').slideUp()
   
-    } else {
-      $('.program__acc-link').removeClass('program__acc-link--activ')
-      $('.program__acc-text').slideUp()
-      $(this).addClass('program__acc-link--activ') 
-      $(this).children('.program__acc-text').slideDown()
- }
-    
-  } )
+//     } else {
+//       $('.program__acc-link').removeClass('program__acc-link--activ')
+//       $('.program__acc-text').slideUp()
+//       $(this).addClass('program__acc-link--activ')
+//       $(this).children('.program__acc-text').slideDown()
+//  }
+    $('.program__acc-link').removeClass('program__acc-link--activ')
+    $(this).toggleClass('program__acc-link--activ')
+    $('.program__acc-text').slideUp()
+    $(this).children('.program__acc-text').slideToggle()
+    } )
   
 })
