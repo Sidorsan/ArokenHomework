@@ -54,7 +54,28 @@ $(function () {
       top = $(id).offset().top -200;
     $('body,html').animate({ scrollTop: top }, 800);
 
+ 
   });
 
+ 
+   $('.burger, .overlay ').on('click', function (e) {
+      e.preventDefault();
+     $('.header__top').toggleClass('header__top--open')
+     $('.overlay').toggleClass('overlay--show')
+     $('.burger').toggleClass('burger--open')
+   })
+  
+  // $(window).on('scroll', function () {
+      
+  // })
+  
+  setInterval(() => {
+    if ($(window).scrollTop() > 0 && $('.header__top').hasClass('header__top--open') === false) {
+    $('.burger').addClass('burger--follow')
+   } else {
+     $('.burger').removeClass('burger--follow')
+  }
+  }, 0);
+ 
 
 })
