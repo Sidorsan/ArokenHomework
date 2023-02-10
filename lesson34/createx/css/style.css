@@ -16,6 +16,7 @@ body {
   padding: 0 15px;
   margin: 0 auto;
   height: 100%;
+
 }
 
 .overlay {
@@ -116,6 +117,9 @@ body {
 
 .logo {}
 
+
+/*===============HEADING==================*/
+/*===============HEADING==================*/
 .heading {
   color: #1E212C;
 }
@@ -227,6 +231,7 @@ body {
 
 .header__body {
   flex: 1 1 auto;
+
 }
 
 .header__body_inner {
@@ -269,12 +274,16 @@ body {
   line-height: 130%;
   letter-spacing: 1px;
   max-width: 500px;
+  margin-bottom: 60px;
 }
 
-.header__content_buttons {}
+.header__content_buttons {
+  display: flex;
+}
 
 .header__content_btn {
   margin-right: 24px;
+  text-align: center;
 }
 
 .header__content_btn:last-child {
@@ -399,6 +408,7 @@ body {
 .about__numbers {
   margin-left: 30px;
   align-self: center;
+  white-space: nowrap;
 }
 
 .about__number {
@@ -459,11 +469,13 @@ body {
 
 .directions__filter_box {
   display: flex;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .directions__filter_item {
   margin-right: 45px;
+  margin-bottom: 15px;
 }
 
 .directions__filter_item:last-child {
@@ -479,6 +491,7 @@ body {
   line-height: 1;
   font-size: 16px;
   padding: 5px 7px;
+  white-space: nowrap;
 }
 
 .directions__filter_btn--active {
@@ -657,6 +670,12 @@ body {
   box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.16), 0px 30px 24px -10px rgba(154, 156, 165, 0.1), 0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
 }
 
+.cert__image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /*___________________TEAM__________________*/
 /*___________________TEAM__________________*/
 
@@ -676,6 +695,55 @@ body {
 
 .team__slider .slick-list {
   margin: 0 -15px;
+}
+.team__slider .slick-dots {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.team__slider .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+.team__slider .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.team__slider .slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: black;
+}
+
+.team__slider .slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 40px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: black;
 }
 
 .team__slide {
@@ -707,6 +775,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  object-position: top;
 }
 
 .team__social {
@@ -1732,7 +1801,19 @@ body {
 
 /*---------------------------MEDIA----------------------------*/
 /*---------------------------MEDIA----------------------------*/
+/*===========================1200============================*/
+@media (max-width: 1200px) {
+  .header__title {
+    font-size: 52px;
+    min-width: 376px;
+  }
 
+  .header__img {
+    max-width: 450px;
+  }
+}
+
+/*===========================1100============================*/
 @media (max-width: 1100px) {
   .burger {
     position: absolute;
@@ -1747,8 +1828,7 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    transition: all 4s;
-
+    transition: all .3s;
   }
 
   .burger--follow {
@@ -1766,7 +1846,7 @@ body {
     background-color: #424551;
     border-radius: 3px;
     margin: 4px 0;
-    transition: all .3s;
+    /* transition: all .3s; */
   }
 
   .burger::after,
@@ -1857,11 +1937,193 @@ body {
   .header__user-nav {
     margin-bottom: 30px;
   }
+
+  /*----------------------------*/
+
+  .heading__title {
+    font-size: 37px;
+  }
+
+  .about__img {
+    max-width: 400px;
+  }
+
+  /*----------------------------*/
+  .cert__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cert__content {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .cert__heading {
+    text-align: center;
+  }
 }
 
-@media (max-width: 400px) {
+/*===========================900============================*/
+@media (max-width: 900px) {
+  .header__content {
+    margin: 0;
+  }
+
+  .header__img {
+    display: none;
+  }
+
+  .header__row {
+    display: none;
+  }
+
+
+
+  /*----------------------------*/
+
+
+  .about__img {
+    display: none;
+  }
+
+  /*----------------------------*/
+
+
+  .directions__filter_item {
+    margin-right: 10px;
+  }
+
+  .directions__list {
+    gap: 30px 10px;
+  }
+
+  .directions__link_content {
+    padding: 24px 5px 5px;
+  }
+
+}
+
+/*===========================700============================*/
+@media (max-width: 700px) {
+  .about__createx {
+    margin-bottom: 60px;
+  }
+
+  .about__values {
+    flex-direction: column;
+  }
+
+  .about__image_box {
+    display: none;
+  }
+
+  .about__numbers {
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  /*----------------------------*/
+
+  .directions__list {
+
+    grid-template: repeat(3, auto)/repeat(2, 1fr);
+
+  }
+
+}
+
+
+
+/*===========================550============================*/
+@media (max-width: 550px) {
+  .heading {
+    margin-bottom: 30px;
+  }
+
+  .heading__subtitle {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .heading__title {
+    font-size: 25px;
+  }
+
+  .about__text {
+    margin-bottom: 30px;
+  }
+
+  .about__paragraph {
+    font-size: inherit;
+    margin-bottom: 10px;
+  }
+
+  .about__btn_box {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .about__btn {
+    margin: 0px 0px 30px 0px;
+  }
+
+  /*----------------------------*/
+  .directions__list {
+    grid-template: none;
+  }
+
+  .directions__list_item--empty {
+    display: none;
+  }
+ .team__image-box {
+  max-width: 300px;
+  margin: 0px auto 0px;
+ }
+ .team__slider-arrows {
+  display: none;
+ }
+}
+
+
+/*===========================450============================*/
+@media (max-width: 450px) {
+
   .header__top {
     width: 100%;
     padding-left: 0;
   }
+
+  /*---------------------------------*/
+  .header__title {
+    max-width: none;
+    font-size: 40px;
+  }
+
+  .header__content_buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__content_btn {
+    margin: 0px 30px 30px 0px;
+    text-align: center;
+
+  }
+
+  /*----------------------------*/
+  .directions__filter_box {
+    margin-bottom: 15px;
+  }
+
+  /*----------------------------*/
+  .cert__logos {
+    flex-direction: column;
+    align-items: center;
+  }
+    .sert__logos-item {
+      margin: 0px 0px 30px 0px;
+    }
+    .sert__logos-item:last-child {
+      margin: 0;
+    }
 }
