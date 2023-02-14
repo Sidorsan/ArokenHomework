@@ -1944,15 +1944,13 @@ body {
     transform: scaleY(0);
   }
 
-  .burger--open::after {
-    transform: rotate(45deg) translateX(-2px) translateY(-9px);
-  }
-
   .burger--open::before {
-    transform: rotate(-45deg) translateX(-2px) translateY(9px);
+    transform: rotate(-45deg) translateX(-5px) translateY(6px);
   }
 
-
+  .burger--open::after {
+    transform: rotate(45deg) translateX(-5px) translateY(-6px);
+  }
   .header {
     padding-top: 92px;
   }
@@ -2384,7 +2382,7 @@ body {
     margin: 0;
     position: relative;
     width: fit-content;
-    
+
   }
 
   .footer__top-title--slide span::before {
