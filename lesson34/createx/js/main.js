@@ -87,7 +87,7 @@ $(function () {
   });
 
 
-  $('.burger, .overlay ').on('click', function (e) {
+  $('.burger, .overlay, .header__top a').on('click', function (e) {
     e.preventDefault();
     $('.header__top').toggleClass('header__top--open')
     $('.overlay').toggleClass('overlay--show')
@@ -106,5 +106,8 @@ $(function () {
     }
   }, 0);
 
-
+$('.footer__top-title--slide').on('click', function () {
+  $(this).next().slideToggle()
+ $(this).toggleClass('footer__top-title--slide_open')
+})
 })
